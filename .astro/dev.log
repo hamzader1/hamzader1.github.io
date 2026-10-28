@@ -1,0 +1,94 @@
+{"message":"`remarkPlugins`, `rehypePlugins` on `mdx({...})` are deprecated. Pass them to `unified({...})` from `@astrojs/markdown-remark` and set it as `markdown.processor` instead — MDX will inherit them. Will be removed in a future major.","label":"@astrojs/mdx","level":"warn"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Generated 0ms","label":"types","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Syncing content","label":"content","level":"info"}
+{"message":"Synced content","label":"content","level":"info"}
+{"message":" astro  v7.4.4 ready in 515 ms\n┃ Local    http://localhost:4321/\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
+{"message":"watching for file changes...","label":null,"level":"info"}
+{"message":"[200] /posts/rust-zero-cost 46ms","label":null,"level":"info"}
+{"message":"[200] /posts/amortized-analysis/ 47ms","label":null,"level":"info"}
+{"message":"[200] /posts/cache-friendly-rust 47ms","label":null,"level":"info"}
+{"message":"[200] / 57ms","label":null,"level":"info"}
+{"message":"[200] / 5ms","label":null,"level":"info"}
+{"message":"[200] /posts/amortized-analysis 6ms","label":null,"level":"info"}
+{"message":"[200] /posts/btree-from-scratch/ 10ms","label":null,"level":"info"}
+{"message":"[200] /posts/btree-from-scratch/ 3ms","label":null,"level":"info"}
+{"message":"[200] / 13ms","label":null,"level":"info"}
+{"message":"[200] /posts/btree-from-scratch 7ms","label":null,"level":"info"}
+{"message":"[200] /work 8ms","label":null,"level":"info"}
+{"message":"[200] /about 13ms","label":null,"level":"info"}
+{"message":"[200] / 9ms","label":null,"level":"info"}
+{"message":"[200] / 19ms","label":null,"level":"info"}
+{"message":"[200] /posts/rust-zero-cost 31ms","label":null,"level":"info"}
+{"message":"[200] /posts/amortized-analysis/ 30ms","label":null,"level":"info"}
+{"message":"[200] /posts/amortized-analysis 29ms","label":null,"level":"info"}
+{"message":"[200] /posts/cache-friendly-rust 29ms","label":null,"level":"info"}
+{"message":"Reloaded data from my-first-post.md","label":"glob-loader","level":"info"}
+{"message":"Reloaded data from my-first-post.md","label":"glob-loader","level":"info"}
+{"message":"[200] / 21ms","label":null,"level":"info"}
+{"message":"[200] /posts/rust-zero-cost 9ms","label":null,"level":"info"}
+{"message":"[200] /posts/amortized-analysis/ 9ms","label":null,"level":"info"}
+{"message":"[200] /posts/amortized-analysis 9ms","label":null,"level":"info"}
+{"message":"[200] /posts/cache-friendly-rust 9ms","label":null,"level":"info"}
+{"message":"[200] /about 83ms","label":null,"level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"[200] /posts/rust-zero-cost 5ms","label":null,"level":"info"}
+{"message":"[200] /about 1ms","label":null,"level":"info"}
+{"message":"[200] /posts/amortized-analysis/ 6ms","label":null,"level":"info"}
+{"message":"[200] /posts/amortized-analysis 2ms","label":null,"level":"info"}
+{"message":"[200] /posts/cache-friendly-rust 1ms","label":null,"level":"info"}
+{"message":"[200] /posts/rust-zero-cost 5ms","label":null,"level":"info"}
+{"message":"[200] /posts/rust-zero-cost 5ms","label":null,"level":"info"}
+{"message":"[200] /about 1ms","label":null,"level":"info"}
+{"message":"[200] /posts/amortized-analysis/ 19ms","label":null,"level":"info"}
+{"message":"[200] /posts/cache-friendly-rust 2ms","label":null,"level":"info"}
+{"message":"[200] /posts/amortized-analysis 1ms","label":null,"level":"info"}
+{"message":"[200] / 13ms","label":null,"level":"info"}
+{"message":"Reloaded data from my-test-post-title.md","label":"glob-loader","level":"info"}
+{"message":"Reloaded data from my-test-post-title.md","label":"glob-loader","level":"info"}
+{"message":"[200] /about 14ms","label":null,"level":"info"}
+{"message":"[200] / 15ms","label":null,"level":"info"}
+{"message":"[200] /posts/rust-zero-cost 19ms","label":null,"level":"info"}
+{"message":"[200] /posts/amortized-analysis/ 19ms","label":null,"level":"info"}
+{"message":"[200] /posts/cache-friendly-rust 19ms","label":null,"level":"info"}
+{"message":"[200] /posts/amortized-analysis 19ms","label":null,"level":"info"}
+{"message":"Reloaded data from my-test-post-title.md","label":"glob-loader","level":"info"}
+{"message":"[200] /posts/amortized-analysis/ 5ms","label":null,"level":"info"}
+{"message":"[200] / 6ms","label":null,"level":"info"}
+{"message":"[200] / 5ms","label":null,"level":"info"}
+{"message":"[200] / 6ms","label":null,"level":"info"}
+{"message":"[200] / 8ms","label":null,"level":"info"}
+{"message":"[200] / 5ms","label":null,"level":"info"}
+{"message":"[200] / 12ms","label":null,"level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"[200] / 5ms","label":null,"level":"info"}
+{"message":"[200] / 2ms","label":null,"level":"info"}
+{"message":"[200] /work 9ms","label":null,"level":"info"}
+{"message":"[200] /about 3ms","label":null,"level":"info"}
+{"message":"[200] / 8ms","label":null,"level":"info"}
+{"message":"Reloaded data from my-test-post-title.md","label":"glob-loader","level":"info"}
+{"message":"[200] / 24ms","label":null,"level":"info"}
+{"message":"[200] / 23ms","label":null,"level":"info"}
+{"message":"[200] /posts/rust-zero-cost 5ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"[200] / 1ms","label":null,"level":"info"}
+{"message":"[200] /posts/my-test-post-title 5ms","label":null,"level":"info"}
+{"message":"[200] /posts/btree-from-scratch 5ms","label":null,"level":"info"}
+{"message":"[200] /posts/rust-zero-cost 7ms","label":null,"level":"info"}
+{"message":"[200] /posts/my-test-post-title 7ms","label":null,"level":"info"}
+{"message":"[200] / 14ms","label":null,"level":"info"}
+{"message":"[200] / 10ms","label":null,"level":"info"}
+{"message":"Configuration file updated. Restarting...","label":null,"level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"server restarted.","label":"vite","level":"info"}
+{"message":"Syncing content","label":"content","level":"info"}
+{"message":"Astro config changed","label":"content","level":"info"}
+{"message":"Clearing content store","label":"content","level":"info"}
+{"message":"Synced content","label":"content","level":"info"}
+{"message":"[200] / 44ms","label":null,"level":"info"}
+{"message":"[200] / 44ms","label":null,"level":"info"}
+{"message":"[200] /posts/my-test-post-title 19ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"Reloaded data from my-test-post-title.md","label":"glob-loader","level":"info"}

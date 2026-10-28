@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const data = posts.map(p => ({
+  id: p.id,
+  title: p.data.title,
+  description: p.data.description || '',
+  tags: p.data.tags,
+  date: p.data.pubDate.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' }),
+  body: (p.body || '').slice(0, 4000),
+}));
+---
+<BaseLayout title="Search">
+  <div class="container" style="padding-top: 40px;">
+    <h1>Search</h1>
+    <input class="search-box" id="q" type="search" placeholder="Search posts…" style="margin: 0 0 24px;" />
+    <div id="results" class="grid"></div>
+  </div>
+  <script define:vars={{ data }}>
+    const input = document.getElementById('q');
+    const results = document.getElementById('results');
+    const params = new URLSearchParams(location.search);
+    if (params.get('q')) input.value = params.get('q');
+    function render(q) {
+      q = q.trim().toLowerCase();
+      results.innerHTML = '';
+      if (!q) { results.innerHTML = '<p style="color:var(--fg-muted)">Type to search…</p>'; return; }
+      const hits = data.filter(p =>
+        p.title.toLowerCase().includes(q) ||
+        p.description.toLowerCase().includes(q) ||
+        p.tags.join(' ').toLowerCase().includes(q) ||
+        p.body.toLowerCase().includes(q)
+      );
+      if (!hits.length) { results.innerHTML = '<p style="color:var(--fg-muted)">No results.</p>'; return; }
+      for (const p of hits) {
+        const a = document.createElement('a');
+        a.className = 'post-card';
+        a.href = '/posts/' + p.id;
+        a.innerHTML = `<h3>${p.title}</h3><p class="desc">${p.description}</p><div class="meta">${p.date} · ${p.tags.join(', ')}</div>`;
+        results.appendChild(a);
+      }
+    }
+    input.addEventListener('input', () => render(input.value));
+    render(input.value);
+  </script>
+</BaseLayout>

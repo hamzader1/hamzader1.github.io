@@ -1,0 +1,25 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { type CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+  headings: { depth: number; slug: string; text: string }[];
+}
+const { post, headings } = Astro.props;
+const { title, description, pubDate, tags } = post.data;
+---
+<BaseLayout title={title} description={description}>
+  <article>
+    <header>
+      <h1>{title}</h1>
+      <div class="meta">
+        {pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        {tags && tags.length > 0 && <> · {tags.join(', ')}</>}
+      </div>
+    </header>
+    <section class="body">
+      <slot />
+    </section>
+  </article>
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+interface Props {
+  name?: string;
+  email?: string;
+  github?: string;
+  linkedin?: string;
+  availability?: string;
+}
+const {
+  name = 'yourname',
+  email = 'you@example.com',
+  github = 'https://github.com/yourname',
+  linkedin = 'https://linkedin.com/in/yourname',
+  availability = 'Need help auditing, optimizing, or building Rust infrastructure?',
+} = Astro.props;
+---
+<div class="terminal-card">
+  <div class="terminal-header">
+    <div class="terminal-dots">
+      <div class="terminal-dot terminal-dot-red"></div>
+      <div class="terminal-dot terminal-dot-yellow"></div>
+      <div class="terminal-dot terminal-dot-green"></div>
+    </div>
+    <div class="terminal-title">{email}</div>
+  </div>
+  <div class="terminal-body">
+    <div class="terminal-command">
+      <div><span class="terminal-prompt">{email}</span>:~$ whoami</div>
+      <div class="terminal-output">I build high-performance systems, distributed architectures, and low-latency applications in Rust.</div>
+    </div>
+    <div class="terminal-command">
+      <div><span class="terminal-prompt">{email}</span>:~$ cat availability.txt</div>
+      <div class="terminal-output">{availability}</div>
+    </div>
+    <div class="terminal-command">
+      <div><span class="terminal-prompt">{email}</span>:~$ mail -s "let's talk about your systems"</div>
+      <div class="terminal-output"><a href={`mailto:${email}`}>{email}</a></div>
+    </div>
+  </div>
+</div>

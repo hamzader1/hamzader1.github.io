@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('posts', ({ data }) => !data.draft);
+const tagCounts = new Map();
+for (const p of posts) for (const t of p.data.tags) tagCounts.set(t, (tagCounts.get(t)||0)+1);
+const tags = [...tagCounts.entries()].sort((a,b) => b[1]-a[1]);
+---
+<BaseLayout title="Tags">
+  <div class="container" style="padding-top: 40px;">
+    <h1>Tags</h1>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top: 20px;">
+      {tags.map(([t,n]) => (
+        <a class="tag" href={`/tags/${t}`} style="font-size: 0.95rem; padding: 6px 14px;">{t} <span style="opacity:.7">({n})</span></a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

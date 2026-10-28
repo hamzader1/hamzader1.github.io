@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Open+Sans:wght@300;400;600&family=JetBrains+Mono:wght@400&display=swap');
+
+:root {
+  --accent: #B9321D;
+  --accent-dark: #7a2518;
+  --link: #2156a5;
+  --line-height: 1.7rem;
+  --maxw: 80ch;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+html {
+  font-family: "EB Garamond", serif;
+  font-size-adjust: ex-height 0.53;
+  -webkit-text-size-adjust: 100%;
+  line-height: var(--line-height);
+  color: rgba(0, 0, 0, .85);
+}
+
+body {
+  max-width: var(--maxw);
+  padding: 2ch;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+header nav {
+  display: flex;
+  column-gap: 2ch;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+header a {
+  font-style: normal;
+  color: rgba(0, 0, 0, .8);
+  text-decoration: none;
+}
+header a:hover {
+  color: rgba(0, 0, 0, .8);
+  text-decoration: underline;
+}
+header .title {
+  font-size: 1.2em;
+  flex-grow: 2;
+}
+
+header:has(> h1) {
+  margin-bottom: 0.75rem;
+}
+header:has(> h1) h1 {
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+footer {
+  margin-top: 2rem;
+}
+footer p {
+  display: flex;
+  column-gap: 2ch;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer a {
+  display: flex;
+  align-items: center;
+  gap: 0.5ch;
+  color: rgba(0, 0, 0, .8);
+  text-decoration: none;
+  white-space: nowrap;
+}
+footer a svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+article > *,
+article > section > *,
+figure.blockquote {
+  max-width: 55ch;
+}
+article > section,
+article > figure,
+article > section > figure {
+  max-width: 80ch;
+}
+
+h1, h2, h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: var(--accent);
+  text-rendering: optimizeLegibility;
+  text-wrap: balance;
+  line-height: 1em;
+  margin-bottom: 0.75rem;
+}
+h1, h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+section { margin-top: 1rem; }
+
+p, table, ol, ul, figure, aside, dl, hr {
+  margin-bottom: var(--line-height);
+}
+
+sup, sub { line-height: 0; }
+
+section:target > :is(h1, h2, h3) { position: relative; }
+section:target > :is(h1, h2, h3)::before {
+  position: absolute;
+  left: -1.2ch;
+  content: "§";
+}
+:is(h1, h2, h3) > a {
+  color: inherit;
+  text-decoration: none;
+}
+:is(h1, h2, h3) > a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, video {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+figure > img, figure > video {
+  display: block;
+  margin-right: auto;
+}
+
+p {
+  hyphens: auto;
+  text-align: justify;
+}
+
+figure.blockquote {
+  padding-left: 1em;
+  border-left: 3px solid var(--accent);
+}
+figure.blockquote > figcaption {
+  text-align: right;
+}
+
+table {
+  border-collapse: collapse;
+  background: #fff;
+}
+table, td, th { border: 1px solid #dedede; }
+td, th { padding: 0.5625em 0.625em; }
+
+ol, ul, dd { padding-left: 3ch; }
+ul { list-style-type: circle; }
+
+dt { font-weight: bold; }
+
+aside.admn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+aside.admn > svg.icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  fill: #19407c;
+}
+aside.admn.warn > svg.icon { fill: var(--accent); }
+aside.admn > div {
+  flex: 1;
+  min-width: 0;
+  padding-left: 1ch;
+  margin-left: 1ch;
+  border-left: 1px solid #dddddf;
+}
+aside.admn > div > :last-child { margin-bottom: 0; }
+
+aside.block {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: #dbdbd6;
+  padding: 1em;
+  background: #f3f3f2;
+}
+aside.block > :last-child { margin-bottom: 0; }
+aside.block > .title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  color: var(--accent-dark);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+details {
+  padding-left: 1em;
+  border-left: 3px solid #19407c;
+}
+
+code {
+  font-family: "JetBrains Mono", monospace;
+  font-variant-ligatures: none;
+  color: rgba(0, 0, 0, .9);
+  font-size: 0.9em;
+}
+
+figcaption.title {
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--accent-dark);
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+figure.code-block > pre > code {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  overflow-y: clip;
+  counter-reset: line;
+  line-height: 1.2;
+}
+figure.code-block > pre > code > .line {
+  counter-increment: line;
+}
+figure.code-block > pre > code > .line:before {
+  content: counter(line);
+  display: inline-block;
+  width: 3ch;
+  padding-right: 0.5ch;
+  margin-right: 1ch;
+  text-align: right;
+  opacity: .35;
+  border-right: 1px solid black;
+}
+
+/* Shiki code blocks */
+pre, pre.astro-code {
+  max-width: 80ch;
+}
+pre.astro-code {
+  background: transparent !important;
+  padding: 0;
+  overflow-x: auto;
+  border-radius: 0;
+  counter-reset: line;
+  margin-bottom: var(--line-height);
+}
+pre.astro-code code {
+  font-family: "JetBrains Mono", monospace;
+  font-variant-ligatures: none;
+  font-size: 1em;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  color: rgba(0, 0, 0, .9);
+}
+pre.astro-code .line {
+  display: block;
+  counter-increment: line;
+}
+pre.astro-code .line::before {
+  content: counter(line);
+  display: inline-block;
+  width: 3ch;
+  padding-right: 0.5ch;
+  margin-right: 1ch;
+  text-align: right;
+  opacity: .35;
+  border-right: 1px solid black;
+  user-select: none;
+}
+
+hr {
+  border: none;
+  height: 0;
+  overflow: visible;
+  color: black;
+  height: var(--line-height);
+}
+hr::after {
+  content: '❧';
+  display: block;
+  text-align: center;
+  color: var(--accent);
+}
+
+p > code {
+  white-space: nowrap;
+  background: #f1f1f1;
+  padding: 0.1em 0.2em;
+  border-radius: 3px;
+}
+
+a {
+  text-decoration-color: var(--link);
+  text-decoration-thickness: 7%;
+  color: black;
+}
+a:hover, a:focus {
+  color: var(--link);
+}
+a:hover code, a:focus code {
+  color: var(--link);
+}
+
+.kbd, kbd {
+  font-family: "JetBrains Mono", monospace;
+  font-variant-ligatures: none;
+  line-height: 1;
+}
+kbd > kbd {
+  display: inline-block;
+  color: rgba(0, 0, 0, .8);
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgb(0 0 0 / 20%), 0 0 0 0.1em #fff inset;
+  margin: 0 0.15em;
+  padding: 0.2em 0.5em;
+  top: -0.1em;
+  vertical-align: middle;
+  position: relative;
+  white-space: nowrap;
+}
+
+.meta {
+  display: block;
+  color: #828282;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.menu { font-weight: bold; }
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+}
+.post-list > li {
+  margin-top: 1em;
+}
+.post-list h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+.post-list a {
+  color: var(--accent);
+  text-decoration: none;
+  display: block;
+}
+.post-list a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.post-list time {
+  color: #828282;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.about-ava {
+  float: left;
+  margin-right: 2ch;
+  display: inline;
+}
+
+/* Inline code in post body */
+.body code {
+  white-space: nowrap;
+}
+
+/* Dark mode */
+html[data-theme="dark"] body {
+  background: #1a1613;
+  color: #e8e0d8;
+}
+html[data-theme="dark"] a { color: #e8e0d8; }
+html[data-theme="dark"] a:hover, html[data-theme="dark"] a:focus { color: var(--link); }
+html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3 {
+  color: var(--accent);
+}
+html[data-theme="dark"] pre.astro-code {
+  background: transparent !important;
+}
+html[data-theme="dark"] pre.astro-code code {
+  color: #e8e0d8;
+}
+html[data-theme="dark"] p > code {
+  background: #3a342e;
+  color: #e8e0d8;
+}
+html[data-theme="dark"] code {
+  color: #e8e0d8;
+}
+html[data-theme="dark"] .meta { color: #a89888; }
+html[data-theme="dark"] table, html[data-theme="dark"] td, html[data-theme="dark"] th {
+  border-color: #444;
+  background: #2a2520;
+}
+html[data-theme="dark"] aside.block {
+  background: #2a2520;
+  border-color: #444;
+}
+
+/* Shiki dark override */
+html[data-theme="dark"] .astro-code,
+html[data-theme="dark"] .astro-code span {
+  color: var(--shiki-dark) !important;
+}
