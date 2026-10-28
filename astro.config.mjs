@@ -35,6 +35,7 @@ const processor = unified({
 });
 
 export default defineConfig({
+  outDir: './docs',
   site: 'https://YOUR-USERNAME.github.io',  // <-- change to your GitHub Pages URL or custom domain
   integrations: [mdx({ remarkPlugins: [remarkGfm, remarkMath], rehypePlugins: [rehypeSlug, rehypeKatex] }), sitemap()],
   markdown: {
